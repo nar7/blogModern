@@ -6,16 +6,19 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "dev:host": "next --hostname '192.168.215.56' --port 8000"
   },
   "dependencies": {
     "eslint": "8.26.0",
     "eslint-config-next": "13.0.1",
     "firebase": "^9.13.0",
+    "i18next": "^22.0.4",
     "next": "13.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-firebase-hooks": "^5.0.3",
+    "react-i18next": "^12.0.0",
     "react-icons": "^4.6.0",
     "react-toastify": "^9.1.1"
   },

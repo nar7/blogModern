@@ -74,7 +74,7 @@ export default function Post() {
   }, [user, loading, DataUpdate]);
 
   return (
-    <div className=" mt-32 bg-white shadow-lg p-12 rounded-lg">
+    <div className=" mt-32 bg-white shadow-lg p-2 rounded-lg">
       <form onSubmit={handleSubmit} className=" space-y-6">
         <h1 className=" font-bold text-xl">
           {post?.hasOwnProperty("id") ? "Edit Post" : "Create a new post"}

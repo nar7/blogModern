@@ -5,8 +5,10 @@ import { collection, getDocs, orderBy, query } from "firebase/firestore";
 import { db } from "../utils/firebase";
 import React, { useEffect, useState } from "react";
 import Spinner from "../components/Spinner";
+import { useTranslation } from "react-i18next";
 
 export default function Home() {
+  const { t, i18n } = useTranslation();
   const [getAllPost, setgetAllPost] = useState([]);
   const getPosts = async () => {
     const q = query(collection(db, "posts"), orderBy("timestamp", "desc"));
@@ -33,9 +35,7 @@ export default function Home() {
       </Head>
 
       <div className=" mt-20">
-        <p className=" text-lg font-semibold">
-          See what other people are saying
-        </p>
+        <p className=" text-lg font-semibold">{t("titleHome")}</p>
         {getAllPost.length == 0 ? (
           <Spinner />
         ) : (
